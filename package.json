@@ -1,0 +1,23 @@
+{
+  "name": "friday_ball",
+  "version": "1.0.0",
+  "description": "weekly friday ball bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lixuanle/friday_ball.git"
+  },
+  "author": "Isaac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lixuanle/friday_ball/issues"
+  },
+  "homepage": "https://github.com/lixuanle/friday_ball#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "twilio": "^3.19.1"
+  }
+}
