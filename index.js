@@ -3,8 +3,6 @@ const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 const botconfig = require("./botconfig.json");
 const KEYAKI_GREEN = 0xa0d468;
-const accountSid = "AC5abd02de79b9c1bec599caba877ca6e6";
-const authToken = '9203da7f2210ee67aea969be167cbf0c';
 // const twilClient = require('twilio')(accountSid, authToken);
 attendance_list = [];
 
