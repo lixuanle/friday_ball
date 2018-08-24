@@ -18,6 +18,7 @@
   "homepage": "https://github.com/lixuanle/friday_ball#readme",
   "dependencies": {
     "discord.js": "^11.4.2",
+    "dotenv": "^6.0.0",
     "twilio": "^3.19.1"
   }
 }
