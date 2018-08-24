@@ -3,21 +3,23 @@ const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 const botconfig = require("./botconfig.json");
 const KEYAKI_GREEN = 0xa0d468;
+const accountSid = "AC5abd02de79b9c1bec599caba877ca6e6";
+const authToken = '9203da7f2210ee67aea969be167cbf0c';
+// const twilClient = require('twilio')(accountSid, authToken);
 attendance_list = [];
 
 bot.on("ready", function() {
   bot.user.setUsername('MONTA_ELLIS');
   console.log(`${bot.user.username} is online!`);
   bot.user.setActivity("Monta Ellis Highlights", {type: 'WATCHING'});
-  var timer = setInterval(updateAttendance, 10000);
   let member_list = bot.guilds.get('482296816180789268').roles.get('482296955935129601').members.map(m => m.id)
   for(i=0;i<member_list.length;i++) {
     attendance_list.push(member_list[i]);
   }
+  var timer = setInterval(updateAttendance, 3600000);
 });
 
 bot.on("guildMemberAdd", (member) => {
-  console.log(member.user)
   member.guild.channels.find("name","general").send("Please head over to the roles channel on the left hand side and read the information there!!" + "<@" + member.user.id + ">")
 });
 
@@ -43,6 +45,8 @@ bot.on("message", async message => {
               color: KEYAKI_GREEN,
               description: "Added " + message.author + " to Members role."
           }}));
+          attendance_list.push(message.author.id);
+          updateAttendance();
         }
       }
     }

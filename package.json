@@ -19,6 +19,6 @@
   "dependencies": {
     "discord.js": "^11.4.2",
     "dotenv": "^6.0.0",
-    "twilio": "^3.19.1"
+    "twilio": "^3.19.2"
   }
 }
