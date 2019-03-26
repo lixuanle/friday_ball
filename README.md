@@ -1,6 +1,6 @@
 # friday_ball
 
-discord script to automate registration of weekly friday basketball attendance.
+discord bot to automate registration of weekly friday basketball attendance.
 
 preview: 
 
